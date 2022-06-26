@@ -25,7 +25,7 @@ def pregunta_01():
     print(y.shape)
 
     # Imprima las dimensiones de `X`
-    print(x.shape)
+    print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
     y_reshaped = y.reshape(-1, 1)
@@ -81,7 +81,7 @@ def pregunta_03():
     y_life = df["life"].values
 
     # Importe LinearRegression
-    from sklear.linear_model import LinearRegression
+    from sklearn.linear_model import LinearRegression
 
     # Cree una instancia del modelo de regresión lineal
     reg = LinearRegression()
