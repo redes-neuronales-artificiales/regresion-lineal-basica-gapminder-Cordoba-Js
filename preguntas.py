@@ -91,7 +91,7 @@ def pregunta_03():
     prediction_space = np.linspace(
         X_fertility.min(),
         X_fertility.max(),
-    ).reshape(-1, 1)
+    ).reshape(1, -1)
 
     # Entrene el modelo usando X_fertility y y_life
     reg.fit(X_fertility, y_life)
@@ -120,10 +120,10 @@ def pregunta_04():
     df = pd.read_csv("gm_2008_region.csv")
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df["fertility"].values()
+    X_fertility = df[["fertility"]]
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = df["life"].values()
+    y_life = df[["life"]]
 
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 53. El tamaño de la muestra de entrenamiento es del 80%
