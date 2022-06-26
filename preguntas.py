@@ -37,7 +37,7 @@ def pregunta_01():
     print(y_reshaped.shape)
 
     # Imprima las nuevas dimensiones de `X`
-    print(x_reshaped.shape)
+    print(X_reshaped.shape)
 
 
 def pregunta_02():
@@ -56,7 +56,7 @@ def pregunta_02():
     print(df.corr()["life"]["fertility"].round(4))
 
     # Imprima la media de la columna `life` con 4 decimales.
-    print(df.mean()["life"].round(4))
+    print(df["life"].mean().round(4))
 
     # Imprima el tipo de dato de la columna `fertility`.
     print(type(df["fertility"]))
